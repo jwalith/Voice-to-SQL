@@ -1,0 +1,19 @@
+{
+  "name": "jarvis-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently --names \"VOICE,GATEWAY,WEB\" --prefix-colors \"cyan,magenta,green\" \"npm run dev --workspace=services/voice-agent\" \"npm run dev --workspace=services/gateway\" \"npm run dev --workspace=apps/web\"",
+    "dev:voice": "npm run dev --workspace=services/voice-agent",
+    "dev:gateway": "npm run dev --workspace=services/gateway",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

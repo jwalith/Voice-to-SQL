@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package voice;
+
+service VoiceService {
+  // Bi-directional streaming: Client sends audio, Server sends audio + text events
+  rpc StreamAudio (stream AudioRequest) returns (stream AudioResponse) {}
+}
+
+message AudioRequest {
+  oneof event {
+    Setup setup = 1;
+    bytes audio_chunk = 2;
+    string text_input = 3;
+  }
+}
+
+message Setup {
+  string session_id = 1;
+  string user_id = 2;
+}
+
+message AudioResponse {
+  oneof event {
+    bytes audio_chunk = 1;
+    string transcript = 2; // What the user said (STT)
+    string text_response = 3; // What the AI is saying (text)
+    string tool_call = 4; // If the AI is executing a tool
+  }
+}
