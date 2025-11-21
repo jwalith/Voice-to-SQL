@@ -2,7 +2,6 @@
 
 A voice-activated data analyst that converts natural language speech into SQL queries using AI. Ask questions about your data using your voice, and get instant answers spoken back to you.
 
-![Demo](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue)
 
