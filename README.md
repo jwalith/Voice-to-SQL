@@ -5,6 +5,16 @@ A voice-activated data analyst that converts natural language speech into SQL qu
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue)
 
+## 🎓 What I Learned Building This
+
+- Implementing microservices with gRPC and Protocol Buffers
+- Real-time bidirectional streaming with WebSockets
+- Monorepo management with npm workspaces
+- TypeScript across full-stack applications
+- Speech-to-text and text-to-speech integration
+- AI function calling and tool use patterns
+
+
 ## 🚀 Features
 
 - **🎙️ Voice Input**: Speak naturally to query your database
@@ -178,14 +188,6 @@ The AI uses Gemini's function calling feature to execute SQL:
 query_database({ sql: "SELECT COUNT(*) FROM sales WHERE item LIKE '%Laptop%'" })
 ```
 
-## 🎓 What I Learned Building This
-
-- Implementing microservices with gRPC and Protocol Buffers
-- Real-time bidirectional streaming with WebSockets
-- AI function calling and tool use patterns
-- Monorepo management with npm workspaces
-- TypeScript across full-stack applications
-- Speech-to-text and text-to-speech integration
 
 ## 🚀 Future Enhancements
 
